@@ -1,12 +1,10 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
+This is the project README. please guys remember to comment to keep track of what's new Thank for the collab!
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Hunting Royal
+PURPOSE OF PROJECT: game programming 
+VERSION or DATE: 11/18/2023 prototype version
+HOW TO START THIS PROJECT: as you wish
+AUTHORS: Kais, Matthew, Ibrahim
+USER INSTRUCTIONS: remember to comment and most importantely remember to create side branches and commit the changes there to keep track of every change and recovery from any mistake
