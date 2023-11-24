@@ -17,7 +17,7 @@ public class Player2Win extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1300, 900, 1); 
-        showTextWithBigBlackFont("Player 2 wins with "+MyWorld.player2Counter.getValue()+ " points!!!", 300, 450);
+        showTextWithBigBlackFont("Player 2 wins with "+FirstLevel.player2Counter.getValue()+ " points!!!", 300, 450);
     }
     public void showTextWithBigBlackFont(String message, int x, int y)
     {

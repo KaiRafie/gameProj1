@@ -20,10 +20,14 @@ public class Player1R extends Actor
         score();
         Player1Win();
         if (Player1Win()) {
-            Player1WinScreen();
-        } 
+            //Player1WinScreen();
+            } 
+        
     
-    }
+        
+        
+        //
+        }
     
     private SimpleTimer dashtimer = new SimpleTimer();
     private SimpleTimer shootingtimer = new SimpleTimer();
@@ -107,7 +111,7 @@ public class Player1R extends Actor
     {
         World world = getWorld();
         
-        if (world.getObjects(Rabbit.class).isEmpty()&&(MyWorld.player1Counter.getValue()>MyWorld.player2Counter.getValue())&&
+        if (world.getObjects(Rabbit.class).isEmpty()&&(FirstLevel.player1Counter.getValue()>FirstLevel.player2Counter.getValue())&&
             world.getObjects(Crocodile.class).isEmpty())
         {
             return true;
@@ -123,6 +127,30 @@ public class Player1R extends Actor
         World player1Win =  new  Player1Win();
         Greenfoot.setWorld(player1Win);
         Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
+    }
+    
+    public void ThirdLevel(){
+        Actor bullet2L = getOneIntersectingObject(Bullet2L.class);
+        Actor bullet2R = getOneIntersectingObject(Bullet2R.class);
+        
+        if (bullet2L != null)
+        {
+            FirstLevel.player2Counter.add(50);
+            FirstLevel.player1Counter.remove(50);
+            
+            getWorld().removeObject(bullet2L);
+            
+                }
+        
+        if (bullet2R != null)
+        {
+            
+            FirstLevel.player2Counter.add(50);
+            FirstLevel.player1Counter.remove(50);
+            
+            getWorld().removeObject(bullet2R);
+            
+        }
     }
     }
 

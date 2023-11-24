@@ -1,15 +1,18 @@
-import lang.stride.*;
-import java.util.*;
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
+ * Write a description of class Camel here.
  * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Crocodile extends Actor
+public class Camel extends Actor
 {
     private int life =2;
+    
     /**
-     * Act - do whatever the croco wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the Camel wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
@@ -29,28 +32,8 @@ public class Crocodile extends Actor
             setLocation(getX(), getY() + 10);
         }
         
-        /*
-        Actor bullet1L = getOneIntersectingObject(Bullet1L.class);
-        if (bullet1L != null) {
-            World world = getWorld();
-            world.removeObject(bullet1L);
-        }
-        Actor bullet1R = getOneIntersectingObject(Bullet1R.class);
-        if (bullet1R != null) {
-            World world = getWorld();
-            world.removeObject(bullet1R);
-        }
-        Actor bullet2L = getOneIntersectingObject(Bullet2L.class);
-        if (bullet2L != null) {
-            World world = getWorld();
-            world.removeObject(bullet2L);
-        }
-        Actor bullet2R = getOneIntersectingObject(Bullet2R.class);
-        if (bullet2R != null) {
-            World world = getWorld();
-            world.removeObject(bullet2R);
-        }
-        */
+        
+        
     }
     
     public void life(){
@@ -66,7 +49,7 @@ public class Crocodile extends Actor
             
         }
         if (life==1) {
-            this.setImage("crocodile_injured.png");
+            //this.setImage("crocodile_injured.png");
         }
         if (life==0){
             if(bullet1L!=null||bullet1R!=null){
@@ -79,5 +62,6 @@ public class Crocodile extends Actor
         }
         
         
+
     }
 }
