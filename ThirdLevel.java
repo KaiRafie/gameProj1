@@ -41,7 +41,7 @@ public class ThirdLevel extends World
         transitionToWin();
     }
     public void transitionToWin(){
-        if (winTimer.millisElapsed()>20000)
+        if (winTimer.millisElapsed()>15000)
         {
             if(FirstLevel.player1Counter.getValue()>FirstLevel.player2Counter.getValue())
             {

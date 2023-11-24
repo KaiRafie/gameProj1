@@ -46,7 +46,7 @@ public class Player2L extends Actor
         if(bullet1R!=null){
             FirstLevel.player1Counter.add(50);
             FirstLevel.player2Counter.remove(50);
-            world.removeObject(bullet1R);
+            world.removeObject(bullet1L);
         }
     }
     /**
@@ -96,11 +96,12 @@ public class Player2L extends Actor
      */
     public void shoot()
     {
+    if(getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")||getWorld().getClass().getName().equals("SecondLevel")){
         if (way == 1) {
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2R(), getX()+55, getY()+18);
+                world.addObject( new  Bullet2R(), getX()+55, getY()+25);
                 shootingtimer.mark();
                 
             }
@@ -109,11 +110,31 @@ public class Player2L extends Actor
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2L(), getX()-55, getY()+18);
+                world.addObject( new  Bullet2L(), getX()-55, getY()+25);
+                shootingtimer.mark();
+            }
+        }
+    }
+    
+        if(getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
+        if (way == 1) {
+            if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) {
+                Greenfoot.playSound("GUNSOUND.wav");
+                World world = getWorld();
+                world.addObject( new  Bullet2R(), getX()+55, getY()+25);
                 shootingtimer.mark();
                 
             }
         }
+        if (way == 2) {
+            if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) {
+                Greenfoot.playSound("GUNSOUND.wav");
+                World world = getWorld();
+                world.addObject( new  Bullet2L(), getX()-55, getY()+25);
+                shootingtimer.mark();
+            }
+        }
+    }
     }
 
     /**

@@ -107,6 +107,7 @@ public class Player1R extends Actor
      */
     public void shoot()
     {
+        if(getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")||getWorld().getClass().getName().equals("SecondLevel")){
         if (way == 1) {
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("space")) {
                 Greenfoot.playSound("GUNSOUND.wav");
@@ -125,7 +126,29 @@ public class Player1R extends Actor
             }
         }
     }
-
+    
+    
+        if(getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
+        if (way == 1) {
+            if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("space")) {
+                Greenfoot.playSound("GUNSOUND.wav");
+                World world = getWorld();
+                world.addObject( new  Bullet1R(), getX()+55, getY()+25);
+                shootingtimer.mark();
+                
+            }
+        }
+        if (way == 2) {
+            if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("space")) {
+                Greenfoot.playSound("GUNSOUND.wav");
+                World world = getWorld();
+                world.addObject( new  Bullet1L(), getX()-55, getY()+25);
+                shootingtimer.mark();
+            }
+        }
+    }
+    
+    }
     /**
      * 
      */
