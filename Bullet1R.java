@@ -32,6 +32,16 @@ public class Bullet1R extends Actor
             snake();
             Remove1();
         }
+        
+        
+        if (getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
+            ThirdLevel world = (ThirdLevel)getWorld();
+            
+            if (isAtEdge())
+            {
+                world.removeObject(this);
+            }
+        }
     }
     
     

@@ -36,9 +36,12 @@ public class Bullet1L extends Actor
         
         
         if (getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
+            ThirdLevel world = (ThirdLevel)getWorld();
             
-            
-            Remove2();            
+            if (isAtEdge())
+            {
+                world.removeObject(this);
+            }
         }
     
     
@@ -113,18 +116,5 @@ public class Bullet1L extends Actor
     }
     
     
-    public void Remove2()
-        {
-        Actor player2L = getOneIntersectingObject(Player2L.class);
-        ThirdLevel world = (ThirdLevel)getWorld();
-        if(player2L!=null){
-            FirstLevel.player2Counter.add(50);
-            FirstLevel.player1Counter.remove(50);
-            world.removeObject(this);
-        }
-        if (isAtEdge())
-        {
-            world.removeObject(this);
-        }
-    }
+    
 }

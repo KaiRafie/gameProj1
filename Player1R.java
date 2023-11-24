@@ -23,7 +23,12 @@ public class Player1R extends Actor
             //Player1WinScreen();
             } 
         
-    
+        
+        if (getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
+            
+            
+            Remove2();            
+        }    
         
         
         //
@@ -32,6 +37,27 @@ public class Player1R extends Actor
     private SimpleTimer dashtimer = new SimpleTimer();
     private SimpleTimer shootingtimer = new SimpleTimer();
     private int way =1;
+    
+    
+    public void Remove2(){
+        Actor bullet2L = getOneIntersectingObject(Bullet2L.class);
+        ThirdLevel world = (ThirdLevel)getWorld();
+        
+        if(bullet2L!=null){
+            FirstLevel.player2Counter.add(50);
+            FirstLevel.player1Counter.remove(50);
+            world.removeObject(bullet2L);
+        }
+        
+        Actor bullet2R = getOneIntersectingObject(Bullet2R.class);
+        
+        if(bullet2R!=null){
+            FirstLevel.player2Counter.add(50);
+            FirstLevel.player1Counter.remove(50);
+            world.removeObject(bullet2R);
+        }
+    }
+    
     
     /**
      * 
