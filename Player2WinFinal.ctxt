@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Player2WinFinal
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Player2WinFinal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Player2WinFinal()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Player2WinFinal.\r\n\ \r\n
+comment2.params=message\ x\ y
+comment2.target=void\ showTextWithBigBlackFont(java.lang.String,\ int,\ int)
+numComments=3

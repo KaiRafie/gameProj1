@@ -22,6 +22,8 @@ public class StartScreen extends World
         StartMusic =  new  GreenfootSound("Creepy Dungeon edit2.wav");
         started();
         
+        FirstLevel.player1Counter.setValue(0);
+        FirstLevel.player2Counter.setValue(0);
     
     }
 
@@ -33,6 +35,8 @@ public class StartScreen extends World
     {
         StartButton startButton = new StartButton();
         addObject(startButton,420,575);
+        StartButtonTutorial startButtonTutorial = new StartButtonTutorial();
+        addObject(startButtonTutorial,420,651);
     }
     
     public void started()

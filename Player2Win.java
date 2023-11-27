@@ -9,6 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Player2Win extends World
 {
 
+    
+    
+    
+    public SimpleTimer transition = new SimpleTimer();
+    
+    
     /**
      * Constructor for objects of class Player2Win.
      * 
@@ -19,6 +25,23 @@ public class Player2Win extends World
         super(1300, 900, 1); 
         showTextWithBigBlackFont("Player 2 wins with "+FirstLevel.player2Counter.getValue()+ " points!!!", 300, 450);
     }
+    
+    
+    public void act(){
+        
+        transitionTo2();
+    }
+    public void transitionTo2(){
+        if (transition.millisElapsed()>5000)
+        {
+            World secondLevel =  new  SecondLevel();
+            Greenfoot.setWorld(secondLevel);
+        }
+        
+        
+    }
+    
+    
     public void showTextWithBigBlackFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();

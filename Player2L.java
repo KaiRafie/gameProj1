@@ -24,12 +24,47 @@ public class Player2L extends Actor
             Remove2();            
         }
         
-        //
+        
+        if (getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")){
+        if (Player2Win()) {
+            Player2WinScreen();
+            }
+        }
+            
+        if (getWorld() != null && getWorld().getClass().getName().equals("SecondLevel")){
+            if (Player2Win2()) {
+            Player2WinScreen2();
+            }  
+        }
     }
     
     private SimpleTimer dashtimer = new SimpleTimer();
     private SimpleTimer shootingtimer = new SimpleTimer();
-    private int way =1;
+    public int way =2;
+    
+    public boolean Player1Win2()
+    {
+        World world = getWorld();
+        
+        if (world.getObjects(Camel.class).isEmpty()&&(FirstLevel.player1Counter.getValue()>FirstLevel.player2Counter.getValue())&&
+            world.getObjects(Snake.class).isEmpty() )
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    public void Player1WinScreen2()
+    {
+        getWorld().stopped();
+        World player1WinL2 =  new  Player1WinL2();
+        Greenfoot.setWorld(player1WinL2);
+        Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
+    }
+    
+
     
     public void Remove2(){
         Actor bullet1L = getOneIntersectingObject(Bullet1L.class);
@@ -46,7 +81,7 @@ public class Player2L extends Actor
         if(bullet1R!=null){
             FirstLevel.player1Counter.add(50);
             FirstLevel.player2Counter.remove(50);
-            world.removeObject(bullet1L);
+            world.removeObject(bullet1R);
         }
     }
     /**
@@ -96,12 +131,13 @@ public class Player2L extends Actor
      */
     public void shoot()
     {
-    if(getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")||getWorld().getClass().getName().equals("SecondLevel")){
+    if(getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")||getWorld().getClass().getName().equals("SecondLevel")
+    ||getWorld().getClass().getName().equals("Tutorial")){
         if (way == 1) {
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2R(), getX()+55, getY()+25);
+                world.addObject( new  Bullet2R(), getX()+55, getY()+20);
                 shootingtimer.mark();
                 
             }
@@ -110,7 +146,7 @@ public class Player2L extends Actor
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2L(), getX()-55, getY()+25);
+                world.addObject( new  Bullet2L(), getX()-55, getY()+20);
                 shootingtimer.mark();
             }
         }
@@ -121,7 +157,7 @@ public class Player2L extends Actor
             if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2R(), getX()+55, getY()+25);
+                world.addObject( new  Bullet2R(), getX()+55, getY()+20);
                 shootingtimer.mark();
                 
             }
@@ -130,7 +166,7 @@ public class Player2L extends Actor
             if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2L(), getX()-55, getY()+25);
+                world.addObject( new  Bullet2L(), getX()-55, getY()+20);
                 shootingtimer.mark();
             }
         }
@@ -165,6 +201,34 @@ public class Player2L extends Actor
         Greenfoot.setWorld(player2Win);
         Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
     }
+    
+    
+    
+    
+    
+    
+    public boolean Player2Win2()
+    {
+        World world = getWorld();
+        
+        if (world.getObjects(Camel.class).isEmpty()&&(FirstLevel.player1Counter.getValue()<FirstLevel.player2Counter.getValue())&&
+            world.getObjects(Snake.class).isEmpty() )
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    public void Player2WinScreen2()
+    {
+        getWorld().stopped();
+        World player2WinL2 =  new  Player2WinL2();
+        Greenfoot.setWorld(player2WinL2);
+        Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
+    }
+    
     
     public void ThirdLevel(){
         Actor bullet1L = getOneIntersectingObject(Bullet2L.class);

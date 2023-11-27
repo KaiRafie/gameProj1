@@ -39,11 +39,7 @@ public class FirstLevel extends World
     }
     
     public void act(){
-        if ( getObjects(Rabbit.class).isEmpty() && getObjects(Crocodile.class).isEmpty()){
-            stopped(); 
-            World secondLevel =  new  SecondLevel();
-            Greenfoot.setWorld(secondLevel);
-        }
+        
     }
     public void showTextWithBigWhiteFont(String message, int x, int y)
     {

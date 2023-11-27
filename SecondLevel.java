@@ -29,11 +29,7 @@ public class SecondLevel extends World
     }
     
     public void act(){
-        if ( getObjects(Snake.class).isEmpty() && getObjects(Camel.class).isEmpty()){
-            stopped(); 
-            World thirdLevel =  new  ThirdLevel();
-            Greenfoot.setWorld(thirdLevel);
-        }
+        
     }
     
     

@@ -45,14 +45,14 @@ public class ThirdLevel extends World
         {
             if(FirstLevel.player1Counter.getValue()>FirstLevel.player2Counter.getValue())
             {
-                World player1Win =  new  Player1Win();
-                Greenfoot.setWorld(player1Win);
+                World player1WinFinal =  new  Player1WinFinal();
+                Greenfoot.setWorld(player1WinFinal);
                 Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
             }
-            else 
+            else if (FirstLevel.player1Counter.getValue()<FirstLevel.player2Counter.getValue())
             {
-                World player2Win =  new  Player2Win();
-                Greenfoot.setWorld(player2Win);
+                World player2WinFinal =  new  Player2WinFinal();
+                Greenfoot.setWorld(player2WinFinal);
                 Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
             }
         }

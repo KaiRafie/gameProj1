@@ -19,10 +19,13 @@ public class Player1R extends Actor
         shoot();
         score();
         Player1Win();
-        if (Player1Win()) {
-            //Player1WinScreen();
-            } 
         
+        
+        if (getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")){
+        if (Player1Win()) {
+            Player1WinScreen();
+            } 
+        }
         
         if (getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
             
@@ -30,7 +33,12 @@ public class Player1R extends Actor
             Remove2();            
         }    
         
-        
+        if (getWorld() != null && getWorld().getClass().getName().equals("SecondLevel")){
+            if (Player1Win2()) {
+            Player1WinScreen2();
+            }  
+                     
+        }
         //
         }
     
@@ -107,7 +115,8 @@ public class Player1R extends Actor
      */
     public void shoot()
     {
-        if(getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")||getWorld().getClass().getName().equals("SecondLevel")){
+        if(getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")||getWorld().getClass().getName().equals("SecondLevel")
+        ||getWorld().getClass().getName().equals("Tutorial")){
         if (way == 1) {
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("space")) {
                 Greenfoot.playSound("GUNSOUND.wav");
@@ -155,6 +164,33 @@ public class Player1R extends Actor
     public void score()
     {
     }
+    
+    
+    
+    
+    public boolean Player1Win2()
+    {
+        World world = getWorld();
+        
+        if (world.getObjects(Camel.class).isEmpty()&&(FirstLevel.player1Counter.getValue()>FirstLevel.player2Counter.getValue())&&
+            world.getObjects(Snake.class).isEmpty() )
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    public void Player1WinScreen2()
+    {
+        getWorld().stopped();
+        World player1WinL2 =  new  Player1WinL2();
+        Greenfoot.setWorld(player1WinL2);
+        Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
+    }
+    
+    
     
     public boolean Player1Win()
     {

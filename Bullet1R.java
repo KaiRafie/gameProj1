@@ -19,6 +19,15 @@ public class Bullet1R extends Actor
         move(8);
             
        
+        if (getWorld() != null && getWorld().getClass().getName().equals("Tutorial"))
+            {
+            girafe();
+            zebra();
+            RemoveTutorial();
+        
+        }
+        
+
         if (getWorld() != null && getWorld().getClass().getName().equals("FirstLevel"))
             {
             croco();
@@ -44,6 +53,38 @@ public class Bullet1R extends Actor
         }
     }
     
+    
+    public void girafe()
+    {
+        Actor girafe = getOneIntersectingObject(Girafe.class);
+        if (girafe != null) {
+            Greenfoot.playSound("Quick_Fart_Sound_EffectEDITED.wav");
+        }
+    }
+    public void zebra()
+    {
+        Actor zebra = getOneIntersectingObject(Zebra.class);
+        if (zebra != null) {
+            Greenfoot.playSound("OOF_SOUND_EFFECT_NO_COPYRIGHT_ROBLOX_DEATH_SOUND_FOR_EDITING_1EDDITED.wav");
+            World world = getWorld();
+            FirstLevel.player1Counter.add(50);
+        }
+    }
+    public void RemoveTutorial()
+    {
+        Actor girafe = getOneIntersectingObject(Girafe.class);
+        Girafe girafe1 = (Girafe)getOneIntersectingObject(Girafe.class);
+        Actor zebra = getOneIntersectingObject(Zebra.class);
+        Tutorial world = (Tutorial)getWorld();
+        if(zebra!=null||isAtEdge()){
+            world.removeObject(zebra);
+            world.removeObject(this);
+        }
+        if(girafe!=null){
+            girafe1.life();
+            world.removeObject(this);
+        }
+    }
     
     
         public void croco()
