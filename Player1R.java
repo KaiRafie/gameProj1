@@ -14,7 +14,7 @@ public class Player1R extends Actor
     public void act()
     {
     
-    
+        
         moveAround();
         shoot();
         score();
@@ -236,21 +236,24 @@ public class Player1R extends Actor
         
         if (bullet2L != null)
         {
+            
+            
             FirstLevel.player2Counter.add(50);
             FirstLevel.player1Counter.remove(50);
             
             getWorld().removeObject(bullet2L);
-            
+            Greenfoot.playSound("hit22.wav");
                 }
         
         if (bullet2R != null)
         {
             
+            
             FirstLevel.player2Counter.add(50);
             FirstLevel.player1Counter.remove(50);
             
             getWorld().removeObject(bullet2R);
-            
+            Greenfoot.playSound("hit22.wav");
         }
     }
     }

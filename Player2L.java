@@ -253,9 +253,10 @@ public class Player2L extends Actor
         
         if (bullet1L != null)
         {
+            
             FirstLevel.player1Counter.add(50);
             FirstLevel.player2Counter.remove(50);
-            
+            Greenfoot.playSound("hit11.wav");
             getWorld().removeObject(bullet1L);
             
                 }
@@ -263,9 +264,10 @@ public class Player2L extends Actor
         if (bullet1R != null)
         {
             
+            
             FirstLevel.player1Counter.add(50);
             FirstLevel.player2Counter.remove(50);
-            
+            Greenfoot.playSound("hit11.wav");
             getWorld().removeObject(bullet1R);
             
         }

@@ -16,8 +16,9 @@ public class Player2WinFinal extends World
     public Player2WinFinal()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1300, 900, 1); 
-            
+        super(1300, 900, 1);  
+        
+        
         showTextWithBigBlackFont("Player 2", 555, 320);
         showTextWithBigBlackFont("is", 620, 420);
         showTextWithBigBlackFont("the winner!!!", 510, 520);

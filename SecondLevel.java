@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SecondLevel extends World
 {
-    
+    private GreenfootSound gameMusic;//creating a variable for music
     
     /**
      * Constructor for objects of class SecondLevel.
@@ -19,6 +19,9 @@ public class SecondLevel extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1300, 900, 1); 
         
+        gameMusic =  new  GreenfootSound("Desert sound new.wav");
+        
+        started();
         
         //this is the design of the counters for the second level
         showTextWithBigWhiteFont("Player 1", 10, 70);
@@ -41,6 +44,26 @@ public class SecondLevel extends World
         bg.setColor(Color.WHITE);
         bg.drawString(message, x, y);
     }
+    
+    
+    
+    /**
+     * this method starts music
+     */
+    public void started()
+    {
+        
+        gameMusic.playLoop();
+    }
+
+    /**
+     * this method stops music
+     */
+    public void stopped()
+    {
+        gameMusic.stop();
+    }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.

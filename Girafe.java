@@ -46,7 +46,7 @@ public class Girafe extends Actor
             
         }
         if (life==1) {
-            //this.setImage("crocodile_injured.png");
+            this.setImage("Girafe_injured.png");
         }
         if (life==0){
             if(bullet1L!=null||bullet1R!=null){

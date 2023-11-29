@@ -20,8 +20,10 @@ public class Tutorial extends World
         showTextWithBigWhiteFont("Player 1", 10, 70);
         addObject(FirstLevel.player1Counter, 50, 20);
         showTextWithBigWhiteFont("Player 2", 1190, 70);
-        addObject(FirstLevel.player2Counter, 1250, 20);
-
+        addObject(FirstLevel.player2Counter, 1250, 30);
+        
+        
+        showTextWithBigWhiteFont("Moving   Shooting   Dashing                                                                Dashing  Shooting  Moving ", 20, 880);
         prepare();
     }
 
@@ -102,10 +104,16 @@ public class Tutorial extends World
         enter.setLocation(931,823);
         removeObject(enter);
         Enter enter1 = new Enter();
-        addObject(enter1,911,831);
-        enter.setLocation(927,830);
-        pbutton.setLocation(1055,830);
+
         pbutton.setLocation(1084,839);
         pbutton.setLocation(1059,828);
+        arrows.setLocation(1202,822);
+        pbutton.setLocation(1097,816);
+
+        pbutton.setLocation(1085,820);
+        arrows.setLocation(1197,805);
+
+        Enter enter2 = new Enter();
+        addObject(enter2,954,823);
     }
 }

@@ -10,7 +10,7 @@ public class ThirdLevel extends World
 {
     
     public SimpleTimer winTimer = new SimpleTimer();
-    
+    private GreenfootSound gameMusic;//creating a variable for music
     /**
      * Constructor for objects of class ThirdLevel.
      * 
@@ -20,6 +20,11 @@ public class ThirdLevel extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1300, 900, 1); 
 
+        gameMusic =  new  GreenfootSound("BONUSLEVEL.wav");
+        
+        started();
+        
+        
         showTextWithBigWhiteFont("Player 1", 10, 70);
         addObject(FirstLevel.player1Counter, 50, 20);
         showTextWithBigWhiteFont("Player 2", 1190, 70);
@@ -45,12 +50,14 @@ public class ThirdLevel extends World
         {
             if(FirstLevel.player1Counter.getValue()>FirstLevel.player2Counter.getValue())
             {
+                stopped();
                 World player1WinFinal =  new  Player1WinFinal();
                 Greenfoot.setWorld(player1WinFinal);
                 Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
             }
             else if (FirstLevel.player1Counter.getValue()<FirstLevel.player2Counter.getValue())
             {
+                stopped();
                 World player2WinFinal =  new  Player2WinFinal();
                 Greenfoot.setWorld(player2WinFinal);
                 Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
@@ -61,6 +68,7 @@ public class ThirdLevel extends World
     }
     
     
+    
     public void showTextWithBigWhiteFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();
@@ -69,6 +77,26 @@ public class ThirdLevel extends World
         bg.setColor(Color.WHITE);
         bg.drawString(message, x, y);
     }
+    
+    
+    
+    /**
+     * this method starts music
+     */
+    public void started()
+    {
+        
+        gameMusic.playLoop();
+    }
+
+    /**
+     * this method stops music
+     */
+    public void stopped()
+    {
+        gameMusic.stop();
+    }
+    
     
     /**
      * Prepare the world for the start of the program.
