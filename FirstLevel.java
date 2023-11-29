@@ -8,14 +8,15 @@ import greenfoot.*;
 public class FirstLevel extends World
 {
     
-    private GreenfootSound gameMusic;
-    
+    private GreenfootSound gameMusic;//creating a variable for music
+    //these are the counter objects for both players
     public static Player1Counter player1Counter =  new  Player1Counter();
     
     public static Player2Counter player2Counter =  new  Player2Counter();
     
         /**
-     * Constructor for objects of class FirstLevel.
+     * Constructor for the first level sets the design of the level with the
+     * background music and the initial values for the score counter
      */
     public FirstLevel()
     {
@@ -25,14 +26,14 @@ public class FirstLevel extends World
         
         started();
         prepare();
-        
+        //initial counter values
         player1Counter.setValue(0);
         player2Counter.setValue(0);
         
         showTextWithBigWhiteFont("Player 1", 10, 70);
-        addObject(player1Counter, 50, 20);
+        addObject(player1Counter, 50, 20);//the place for the counter1
         showTextWithBigWhiteFont("Player 2", 1190, 70);
-        addObject(player2Counter, 1250, 20);
+        addObject(player2Counter, 1250, 20);//the place for the counter2
         
         
         
@@ -42,7 +43,7 @@ public class FirstLevel extends World
         
     }
     public void showTextWithBigWhiteFont(String message, int x, int y)
-    {
+    {//this method for the text shown on the top corners
         GreenfootImage bg = getBackground();
         Font font =  new  Font(30);
         bg.setFont(font);
@@ -51,7 +52,7 @@ public class FirstLevel extends World
     }
     
     /**
-     * 
+     * this method starts music
      */
     public void started()
     {
@@ -60,7 +61,7 @@ public class FirstLevel extends World
     }
 
     /**
-     * 
+     * this method stops music
      */
     public void stopped()
     {

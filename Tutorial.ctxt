@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Tutorial
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tutorial\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ this\ is\ the\ Tutorial\ class\ where\ we\ show\ a\ little\ bit\ of\ the\ game\ to\r\n\ understand\ everything\ before\ playing\ the\ whole\ game\r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=Tutorial()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tutorial.\r\n\ \r\n

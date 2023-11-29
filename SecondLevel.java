@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class SecondLevel here.
+ * this is the second level class
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -20,11 +20,11 @@ public class SecondLevel extends World
         super(1300, 900, 1); 
         
         
-        
+        //this is the design of the counters for the second level
         showTextWithBigWhiteFont("Player 1", 10, 70);
-        addObject(FirstLevel.player1Counter, 50, 20);
+        addObject(FirstLevel.player1Counter, 50, 20);//this recalls the counter to keep the same score from the first level
         showTextWithBigWhiteFont("Player 2", 1190, 70);
-        addObject(FirstLevel.player2Counter, 1250, 20);
+        addObject(FirstLevel.player2Counter, 1250, 20);//this recalls the counter too
         prepare();
     }
     

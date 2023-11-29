@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ThirdLevel here.
+ * this is the last level a fighting arena
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -61,7 +61,6 @@ public class ThirdLevel extends World
     }
     
     
-    
     public void showTextWithBigWhiteFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();
@@ -70,6 +69,7 @@ public class ThirdLevel extends World
         bg.setColor(Color.WHITE);
         bg.drawString(message, x, y);
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -80,5 +80,6 @@ public class ThirdLevel extends World
         addObject(player2L,1227,548);
         Player1R player1R = new Player1R();
         addObject(player1R,100,555);
+        player2L.setLocation(1172,540);
     }
 }

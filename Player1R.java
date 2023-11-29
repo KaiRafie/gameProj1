@@ -28,11 +28,9 @@ public class Player1R extends Actor
         }
         
         if (getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
-            
-            
-            Remove2();            
-        }    
-        
+            Remove2(); 
+            walls();
+        }
         if (getWorld() != null && getWorld().getClass().getName().equals("SecondLevel")){
             if (Player1Win2()) {
             Player1WinScreen2();
@@ -109,7 +107,25 @@ public class Player1R extends Actor
                   }
         }
     }
-
+    public void walls()// this method prevents the player from clipping through the walls of the third level
+    {
+        if (getWorld().getObjectsAt(20, getY(), Player1R.class).contains(this))
+        {
+            setLocation(getX()+15, getY()+1);
+        }
+        if (getWorld().getObjectsAt(1250, getY(), Player1R.class).contains(this))
+        {
+            setLocation(getX()-15, getY()+1);
+        }
+        if (getWorld().getObjectsAt(getX(), 130, Player1R.class).contains(this))
+        {
+            setLocation(getX()+1, getY()+15);
+        }
+        if (getWorld().getObjectsAt(getX(), 830, Player1R.class).contains(this))
+        {
+            setLocation(getX()+1, getY()-15);
+        }
+    }
     /**
      * 
      */

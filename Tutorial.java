@@ -1,8 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Tutorial here.
- * 
+ * this is the Tutorial class where we show a little bit of the game to
+ * understand everything before playing the whole game
  * @author (your name) 
  * @version (a version number or a date)
  */
@@ -70,5 +70,42 @@ public class Tutorial extends World
         addObject(zebra4,285,117);
         Zebra zebra5 = new Zebra();
         addObject(zebra5,588,133);
+        Arrows arrows = new Arrows();
+        addObject(arrows,1076,816);
+        Pbutton pbutton = new Pbutton();
+        addObject(pbutton,929,820);
+        arrows.setLocation(1180,821);
+        pbutton.setLocation(1050,835);
+        Enter enter = new Enter();
+        addObject(enter,856,826);
+        enter.setLocation(920,832);
+        arrows.setLocation(1188,824);
+        pbutton.setLocation(1087,824);
+        enter.setLocation(929,818);
+        pbutton.setLocation(1060,824);
+        Wasd wasd = new Wasd();
+        addObject(wasd,69,816);
+        Spacebar spacebar = new Spacebar();
+        addObject(spacebar,212,825);
+        Tab tab = new Tab();
+        addObject(tab,354,815);
+        tab.setLocation(308,832);
+        spacebar.setLocation(206,836);
+        enter.setLocation(939,812);
+        arrows.setLocation(1205,819);
+        pbutton.setLocation(1082,831);
+        enter.setLocation(962,839);
+        tab.setLocation(340,830);
+        enter.setLocation(932,817);
+        enter.setLocation(960,844);
+        enter.setLocation(937,818);
+        enter.setLocation(931,823);
+        removeObject(enter);
+        Enter enter1 = new Enter();
+        addObject(enter1,911,831);
+        enter.setLocation(927,830);
+        pbutton.setLocation(1055,830);
+        pbutton.setLocation(1084,839);
+        pbutton.setLocation(1059,828);
     }
 }

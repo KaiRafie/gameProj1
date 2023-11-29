@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Player2WinFinal here.
+ * this class shows that the first player won the Last round/level
  * 
  * @author (your name) 
  * @version (a version number or a date)

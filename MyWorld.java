@@ -3,7 +3,7 @@ import java.util.*;
 import greenfoot.*;
 
 /**
- * 
+ * this class can not be removed
  */
 public class MyWorld extends World
 {

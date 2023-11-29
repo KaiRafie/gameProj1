@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Player2Win here.
+ * this class shows that the second player won the first round/level
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -31,7 +31,8 @@ public class Player2Win extends World
         
         transitionTo2();
     }
-    public void transitionTo2(){
+    public void transitionTo2()//after 5 seconds we transition the screen to the second level
+    {
         if (transition.millisElapsed()>5000)
         {
             World secondLevel =  new  SecondLevel();

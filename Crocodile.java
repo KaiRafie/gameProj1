@@ -29,28 +29,6 @@ public class Crocodile extends Actor
             setLocation(getX(), getY() + 10);
         }
         
-        /*
-        Actor bullet1L = getOneIntersectingObject(Bullet1L.class);
-        if (bullet1L != null) {
-            World world = getWorld();
-            world.removeObject(bullet1L);
-        }
-        Actor bullet1R = getOneIntersectingObject(Bullet1R.class);
-        if (bullet1R != null) {
-            World world = getWorld();
-            world.removeObject(bullet1R);
-        }
-        Actor bullet2L = getOneIntersectingObject(Bullet2L.class);
-        if (bullet2L != null) {
-            World world = getWorld();
-            world.removeObject(bullet2L);
-        }
-        Actor bullet2R = getOneIntersectingObject(Bullet2R.class);
-        if (bullet2R != null) {
-            World world = getWorld();
-            world.removeObject(bullet2R);
-        }
-        */
     }
     
     public void life(){

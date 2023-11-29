@@ -14,7 +14,7 @@ public class StartScreen extends World
     
     public StartScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 1300x900 cells with a cell size of 1x1 pixels.
         super(1300, 900, 1); 
         prepare();
         
@@ -33,10 +33,10 @@ public class StartScreen extends World
      */
     private void prepare()
     {
-        StartButton startButton = new StartButton();
-        addObject(startButton,420,575);
-        StartButtonTutorial startButtonTutorial = new StartButtonTutorial();
-        addObject(startButtonTutorial,420,651);
+        StartButton startButton = new StartButton();//this creates the start button
+        addObject(startButton,420,575);// adds the start button at indicated location
+        StartButtonTutorial startButtonTutorial = new StartButtonTutorial();//this creates the Tutorial button
+        addObject(startButtonTutorial,420,651);// adds the tutorial button below the start button
     }
     
     public void started()
