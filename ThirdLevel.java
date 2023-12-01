@@ -34,7 +34,7 @@ public class ThirdLevel extends World
         
        
         showTextWithBigWhiteFont("Final 15 seconds PVP fight ", 505, 70);
-        showTextWithBigWhiteFont("Hitting the opponent gains you 50 points and loses them 50 points", 200, 100);
+        showTextWithBigWhiteFont("Hitting the opponent gains you 50 points and loses them 50 points", 220, 100);
         
         
         prepare();
