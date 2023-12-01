@@ -31,7 +31,7 @@ public class Bullet1L extends Actor
         if (getWorld() != null && getWorld().getClass().getName().equals("FirstLevel"))
             {
             croco();
-            rab();;
+            rab();
             Remove();
         
         }
