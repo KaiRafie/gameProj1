@@ -242,7 +242,7 @@ public class Player1R extends Actor
             FirstLevel.player1Counter.remove(50);
             
             getWorld().removeObject(bullet2L);
-            Greenfoot.playSound("hit22.wav");
+            
                 }
         
         if (bullet2R != null)
@@ -253,7 +253,6 @@ public class Player1R extends Actor
             FirstLevel.player1Counter.remove(50);
             
             getWorld().removeObject(bullet2R);
-            Greenfoot.playSound("hit22.wav");
         }
     }
     }

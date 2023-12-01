@@ -24,10 +24,17 @@ public class Tutorial extends World
         
         
         showTextWithBigWhiteFont("Moving   Shooting   Dashing                                                                Dashing  Shooting  Moving ", 20, 880);
+        
+        showTextWithBigWhiteFont(" Welcome to Hunters Royal",500,25);
+        showTextWithBigWhiteFont(" Big Animals need two shots to kill and give 100 points",325,60);
+        showTextWithBigWhiteFont(" Small Animals need one shot to kill and give 50 points",325,85);
+        showTextWithBigWhiteFont("Watch out! The Final level is different!",450,120);
+
         prepare();
     }
 
-    public void act(){
+        public void act()
+        {
         if ( getObjects(Girafe.class).isEmpty() && getObjects(Zebra.class).isEmpty()){
             stopped(); 
             World startScreen =  new  StartScreen();
@@ -115,5 +122,8 @@ public class Tutorial extends World
 
         Enter enter2 = new Enter();
         addObject(enter2,954,823);
+        removeObject(girafe4);
+        removeObject(zebra5);
+        zebra4.setLocation(184,259);
     }
 }

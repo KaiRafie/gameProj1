@@ -49,7 +49,7 @@ public class Camel extends Actor
             
         }
         if (life==1) {
-            //this.setImage("crocodile_injured.png");
+            this.setImage("CAMEL1_injuredS.png");
         }
         if (life==0){
             if(bullet1L!=null||bullet1R!=null){

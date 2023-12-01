@@ -256,7 +256,6 @@ public class Player2L extends Actor
             
             FirstLevel.player1Counter.add(50);
             FirstLevel.player2Counter.remove(50);
-            Greenfoot.playSound("hit11.wav");
             getWorld().removeObject(bullet1L);
             
                 }
@@ -267,7 +266,6 @@ public class Player2L extends Actor
             
             FirstLevel.player1Counter.add(50);
             FirstLevel.player2Counter.remove(50);
-            Greenfoot.playSound("hit11.wav");
             getWorld().removeObject(bullet1R);
             
         }

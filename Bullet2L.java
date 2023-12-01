@@ -44,7 +44,12 @@ public class Bullet2L extends Actor
         
         if (getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
             ThirdLevel world = (ThirdLevel)getWorld();
+            Actor player1R = getOneIntersectingObject(Player1R.class);
+            if (player1R != null) {
             
+                Greenfoot.playSound("hit11L.wav");
+                
+            }
             if (isAtEdge())
             {
                 world.removeObject(this);

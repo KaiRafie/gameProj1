@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SecondLevel extends World
 {
     private GreenfootSound gameMusic;//creating a variable for music
-    
+    private GreenfootSound gameMusic1;
     /**
      * Constructor for objects of class SecondLevel.
      * 
@@ -21,6 +21,8 @@ public class SecondLevel extends World
         
         gameMusic =  new  GreenfootSound("Desert sound new.wav");
         
+        gameMusic.setVolume(55);
+        gameMusic1 =  new  GreenfootSound("the_eternal_sands.wav");
         started();
         
         //this is the design of the counters for the second level
@@ -54,6 +56,7 @@ public class SecondLevel extends World
     {
         
         gameMusic.playLoop();
+        gameMusic1.playLoop();
     }
 
     /**
@@ -62,6 +65,7 @@ public class SecondLevel extends World
     public void stopped()
     {
         gameMusic.stop();
+        gameMusic1.stop();
     }
     
     /**

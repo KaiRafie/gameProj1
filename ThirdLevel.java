@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ThirdLevel extends World
 {
-    
+  
     public SimpleTimer winTimer = new SimpleTimer();
     private GreenfootSound gameMusic;//creating a variable for music
     /**
@@ -22,6 +22,8 @@ public class ThirdLevel extends World
 
         gameMusic =  new  GreenfootSound("BONUSLEVEL.wav");
         
+        gameMusic.setVolume(50);
+        
         started();
         
         
@@ -30,7 +32,9 @@ public class ThirdLevel extends World
         showTextWithBigWhiteFont("Player 2", 1190, 70);
         addObject(FirstLevel.player2Counter, 1250, 20);
         
-        showTextWithBigWhiteFont("time "+ timeleft(), 700, 70);
+       
+        showTextWithBigWhiteFont("Final 15 seconds PVP fight ", 505, 70);
+        showTextWithBigWhiteFont("Hitting the opponent gains you 50 points and loses them 50 points", 200, 100);
         
         
         prepare();
@@ -42,6 +46,12 @@ public class ThirdLevel extends World
         return winTimer.millisElapsed();
     }
     public void act(){
+        
+        Display display = new Display();
+        addObject(display , 700, 20);
+        int timerValue = (int) (timeleft())/1000;
+        //showTextWithBigWhiteFont("time "+ timerValue , 700, 70);
+        display.setImage(new GreenfootImage("Time Left :" + timerValue , 35, Color.WHITE, Color.BLACK, Color.BLACK));
         
         transitionToWin();
     }
