@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Tutorial extends World
 {
 
+    private GreenfootSound gameMusic;//creating a variable for music
+    
     /**
      * Constructor for objects of class Tutorial.
      * 
@@ -30,6 +32,9 @@ public class Tutorial extends World
         showTextWithBigWhiteFont(" Small Animals need one shot to kill and give 50 points",325,85);
         showTextWithBigWhiteFont("Watch out! The Final level is different!",450,120);
 
+        gameMusic =  new  GreenfootSound("Tutorial_music.wav");
+        
+        started();
         prepare();
     }
 
@@ -42,6 +47,23 @@ public class Tutorial extends World
         }
     }
 
+    /**
+     * this method starts music
+     */
+    public void started()
+    {
+        
+        gameMusic.playLoop();
+    }
+
+    /**
+     * this method stops music
+     */
+    public void stopped()
+    {
+        gameMusic.stop();
+    }
+    
     public void showTextWithBigWhiteFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();

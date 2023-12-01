@@ -17,7 +17,7 @@ public class StartButton extends Actor
         
         if (Greenfoot.mouseMoved(this))
         {
-            setImage("Option_Button_Highlighted.png");
+            setImage("Option_Button_Highlighted_red.png");
         }
 
         if (Greenfoot.mouseMoved(getWorld()))

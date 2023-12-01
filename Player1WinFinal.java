@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Player1WinFinal extends World
 {
 
+    public SimpleTimer transition = new SimpleTimer();
+    
     /**
      * Constructor for objects of class Player1WinFinal.
      * 
@@ -18,12 +20,18 @@ public class Player1WinFinal extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1300, 900, 1); 
         stopped();
-        showTextWithBigBlackFont("Player 1", 555, 320);
-        showTextWithBigBlackFont("is", 620, 420);
-        showTextWithBigBlackFont("the winner!!!", 510, 520);
-        showTextWithBigBlackFont("Final Score \n     "+FirstLevel.player1Counter.getValue(),520,580);
+      showTextWithBigBlackFont("Player 1", 555, 280);
+        showTextWithBigBlackFont("is", 620, 370);
+        showTextWithBigBlackFont("the winner!!!", 510, 460);
+        showTextWithBigBlackFont("Final Score \n     "+FirstLevel.player1Counter.getValue(),520,560);
     }
-    
+    public void act(){
+        if (transition.millisElapsed()>6000)
+        {
+            World startScreen =  new  StartScreen();
+            Greenfoot.setWorld(startScreen);
+        }
+    }
     public void showTextWithBigBlackFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();
