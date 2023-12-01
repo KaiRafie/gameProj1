@@ -23,6 +23,8 @@ public class Player2Win extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1300, 900, 1); 
+        
+        showTextWithBigBlackFont("Press C to continue to next level ", 260, 870);
         showTextWithBigBlackFont("Player 2 wins with "+FirstLevel.player2Counter.getValue()+ " points!!!", 300, 450);
     }
     
@@ -30,6 +32,12 @@ public class Player2Win extends World
     public void act(){
         
         transitionTo2();
+        
+        if (Greenfoot.isKeyDown("c"))
+        {
+            World secondLevel =  new  SecondLevel();
+            Greenfoot.setWorld(secondLevel);
+        }
     }
     public void transitionTo2()//after 5 seconds we transition the screen to the second level
     {

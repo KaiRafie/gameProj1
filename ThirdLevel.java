@@ -51,7 +51,7 @@ public class ThirdLevel extends World
         addObject(display , 700, 20);
         int timerValue = (int) (timeleft())/1000;
         //showTextWithBigWhiteFont("time "+ timerValue , 700, 70);
-        display.setImage(new GreenfootImage("Time Left :" + timerValue , 35, Color.WHITE, Color.BLACK, Color.BLACK));
+        display.setImage(new GreenfootImage( timerValue +" Seconds", 35, Color.WHITE, Color.BLACK, Color.BLACK));
         
         transitionToWin();
     }

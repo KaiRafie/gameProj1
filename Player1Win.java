@@ -22,12 +22,20 @@ public class Player1Win extends World
         super(1300, 900, 1);
         
         showTextWithBigBlackFont("Player 1 wins with "+FirstLevel.player1Counter.getValue()+ " points!!!", 300, 450);
+        
+        showTextWithBigBlackFont("Press C to continue to next level ", 260, 870);
     }
     
     
     public void act(){
         
         transitionTo2();
+        
+        if (Greenfoot.isKeyDown("c"))
+        {
+            World secondLevel =  new  SecondLevel();
+            Greenfoot.setWorld(secondLevel);
+        }
     }
     public void transitionTo2()//after 5 seconds we transition the screen to the third level
     {

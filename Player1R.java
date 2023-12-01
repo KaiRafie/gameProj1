@@ -137,7 +137,7 @@ public class Player1R extends Actor
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("space")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet1R(), getX()+55, getY()+25);
+                world.addObject( new  Bullet1R(), getX()+60, getY()+20);
                 shootingtimer.mark();
                 
             }
@@ -146,7 +146,7 @@ public class Player1R extends Actor
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("space")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet1L(), getX()-55, getY()+25);
+                world.addObject( new  Bullet1L(), getX()-60, getY()+20);
                 shootingtimer.mark();
             }
         }
@@ -158,7 +158,7 @@ public class Player1R extends Actor
             if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("space")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet1R(), getX()+55, getY()+25);
+                world.addObject( new  Bullet1R(), getX()+60, getY()+20);
                 shootingtimer.mark();
                 
             }
@@ -167,7 +167,7 @@ public class Player1R extends Actor
             if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("space")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet1L(), getX()-55, getY()+25);
+                world.addObject( new  Bullet1L(), getX()+60, getY()+20);
                 shootingtimer.mark();
             }
         }

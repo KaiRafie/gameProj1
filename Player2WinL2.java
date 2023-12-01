@@ -20,13 +20,20 @@ public class Player2WinL2 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1300, 900, 1); 
-        showTextWithBigBlackFont("Player 2 wins with "+FirstLevel.player2Counter.getValue()+ " points!!!", 300, 450);
+        showTextWithBigBlackFont("Press C to continue to next level ", 365, 900);
+        
+        showTextWithBigBlackFont("Player 2 wins with "+FirstLevel.player2Counter.getValue()+ " points!!!", 360, 450);
     }
     
     
     public void act(){
         
         transitionTo2();
+        if (Greenfoot.isKeyDown("c"))
+        {
+            World thirdLevel =  new  ThirdLevel();
+            Greenfoot.setWorld(thirdLevel);
+        }
     }
     public void transitionTo2()//after 5 seconds we transition the screen to the third level
     {
@@ -43,7 +50,7 @@ public class Player2WinL2 extends World
     public void showTextWithBigBlackFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();
-        Font font =  new  Font(true,false,50);
+        Font font =  new  Font(true,false,40);
         bg.setFont(font);
         bg.setColor(Color.BLACK);
         bg.drawString(message, x, y);

@@ -22,6 +22,7 @@ public class Player2WinFinal extends World
         showTextWithBigBlackFont("Player 2", 555, 320);
         showTextWithBigBlackFont("is", 620, 420);
         showTextWithBigBlackFont("the winner!!!", 510, 520);
+        showTextWithBigBlackFont("Final Score \n     "+FirstLevel.player2Counter.getValue(),520,580);
     }
     
     public void showTextWithBigBlackFont(String message, int x, int y)

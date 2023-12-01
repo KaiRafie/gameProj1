@@ -154,7 +154,7 @@ public class Player2L extends Actor
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2R(), getX()+55, getY()+20);
+                world.addObject( new  Bullet2R(), getX()+60, getY()+13);
                 shootingtimer.mark();
                 
             }
@@ -163,7 +163,7 @@ public class Player2L extends Actor
             if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2L(), getX()-55, getY()+20);
+                world.addObject( new  Bullet2L(), getX()-60, getY()+13);
                 shootingtimer.mark();
             }
         }
@@ -174,7 +174,7 @@ public class Player2L extends Actor
             if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2R(), getX()+55, getY()+20);
+                world.addObject( new  Bullet2R(), getX()+60, getY()+13);
                 shootingtimer.mark();
                 
             }
@@ -183,7 +183,7 @@ public class Player2L extends Actor
             if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
-                world.addObject( new  Bullet2L(), getX()-55, getY()+20);
+                world.addObject( new  Bullet2L(), getX()-60, getY()+13);
                 shootingtimer.mark();
             }
         }
