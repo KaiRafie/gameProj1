@@ -3,9 +3,10 @@ import java.util.*;
 import greenfoot.*;
 
 /**
- * 
+ * This is one of the big animals that need to be hit twice, the Crocodile class.
+ * All explanations found in Camel class because it's quite the same*
  */
-public class Crocodile extends Actor
+public class Crocodile extends BigAnimals
 {
     private int life =2;
     /**

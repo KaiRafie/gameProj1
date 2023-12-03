@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Crocodile
-comment0.text=\r\n\ \r\n
+comment0.text=\r\n\ This\ is\ one\ of\ the\ big\ animals\ that\ need\ to\ be\ hit\ twice,\ the\ Crocodile\ class.\r\n\ All\ explanations\ found\ in\ Camel\ class\ because\ it's\ quite\ the\ same*\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ croco\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

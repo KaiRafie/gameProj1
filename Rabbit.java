@@ -3,9 +3,10 @@ import java.util.*;
 import greenfoot.*;
 
 /**
- * 
+ * This is one of the small animals that need to be hit once, the Rabbit class.
+ * Since these animals need to be hit once, they have every code from the big animals but the "life" things.
  */
-public class Rabbit extends Actor
+public class Rabbit extends SmallAnimals
 {
 
     /**

@@ -1,12 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class StartButtonTutorial here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This is the Tutorial button
+ * explanaition for codes found in StartButton class
  */
-public class StartButtonTutorial extends Actor
+public class StartButtonTutorial extends GameInterface
 {
     /**
      * Act - do whatever the StartButtonTutorial wants to do. This method is called whenever

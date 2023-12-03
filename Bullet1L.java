@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * This is the Left bullet for player1 class, where the bullet flys left
  *
  */
-public class Bullet1L extends Actor
+public class Bullet1L extends Player1Things
 {
     
     

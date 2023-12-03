@@ -1,10 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * these show the controls only in the tutorial level
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * these are the controls visual explanaintions shown only in the tutorial level
  */
 public class Controls extends Actor
 {

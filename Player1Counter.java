@@ -30,7 +30,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Neil Brown and Michael Kölling 
  * @version 1.0
  */
-public class Player1Counter extends Actor
+public class Player1Counter extends Player1Things
 {
     private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;

@@ -5,7 +5,7 @@ import greenfoot.*;
 /**
  * 
  */
-public class Tree extends Actor
+public class Tree extends Obstacles
 {
 public GreenfootSound TreeSound;
     /**

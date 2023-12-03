@@ -1,12 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Snake here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This is one of the small animals that need to be hit once, the Snake class.
+ * Since these animals need to be hit once, they have every code from the big animals but the "life" things.
  */
-public class Snake extends Actor
+public class Snake extends SmallAnimals
 {
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever

@@ -1,12 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Girafe here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This is one of the big animals that need to be hit twice, the Giraffe class.
+ *All explanations found in Camel class because it's quite the same*
  */
-public class Giraffe extends Actor
+public class Giraffe extends BigAnimals
 {
     private int life =2;
     

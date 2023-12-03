@@ -1,12 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Zebra here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This is one of the small animals that need to be hit once, the Zebra class.
+ * Since these animals need to be hit once, they have every code from the big animals but the "life" things.
  */
-public class Zebra extends Actor
+public class Zebra extends SmallAnimals
 {
     /**
      * Act - do whatever the Zebra wants to do. This method is called whenever

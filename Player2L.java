@@ -3,9 +3,10 @@ import java.util.*;
 import greenfoot.*;
 
 /**
- * 
+ * this is player 2, the L stands for facing Left
+ * the explanation for the codes found in Player1R class since the two classes are similar
  */
-public class Player2L extends Actor
+public class Player2L extends Players
 {
 
     /**
@@ -15,7 +16,6 @@ public class Player2L extends Actor
     {
         moveAround();
         shoot();
-        score();
         Player2Win();
         
         if (getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
@@ -23,23 +23,26 @@ public class Player2L extends Actor
             Remove2();            
         }
         
-        
-        if (getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")){
-        if (Player2Win()) {
-            Player2WinScreen();
+        if (getWorld() != null && getWorld().getClass().getName().equals("FirstLevel"))
+        {
+            if (Player2Win()) 
+            {
+                Player2WinScreen();
             }
         }
             
-        if (getWorld() != null && getWorld().getClass().getName().equals("SecondLevel")){
-            if (Player2Win2()) {
-            Player2WinScreen2();
+        if (getWorld() != null && getWorld().getClass().getName().equals("SecondLevel"))
+        {
+            if (Player2Win2())
+            {
+                Player2WinScreen2();
             }  
         }
     }
     
     private SimpleTimer dashtimer = new SimpleTimer();
     private SimpleTimer shootingtimer = new SimpleTimer();
-    public int way =2;
+    public int facingDirection =2;// the starting position if facing left.
     
     public boolean Player1Win2()
     {
@@ -50,7 +53,8 @@ public class Player2L extends Actor
         {
             return true;
         }
-        else {
+        else 
+        {
             return false;
         }
     }
@@ -62,8 +66,6 @@ public class Player2L extends Actor
         Greenfoot.setWorld(player1WinL2);
         Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
     }
-    
-
     
     public void Remove2(){
         Actor bullet1L = getOneIntersectingObject(Bullet1L.class);
@@ -88,40 +90,45 @@ public class Player2L extends Actor
      */
     public void moveAround()
     {
-              if(Greenfoot.isKeyDown("up")){
-                setLocation(getX(), getY()-4);
-                if (dashtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("enter"))
-              {    setLocation(getX(), getY()-152);
-                  dashtimer.mark();
-              }
+        if(Greenfoot.isKeyDown("up"))
+        {
+            setLocation(getX(), getY()-4);
+            if (dashtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("enter"))
+            {
+                setLocation(getX(), getY()-152);
+                dashtimer.mark();
+            }
         }  
-            if(Greenfoot.isKeyDown("down")){
-                setLocation(getX(), getY()+4);
-                if (dashtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("enter"))
-              {
-                    setLocation(getX(), getY()+152);
-                    dashtimer.mark();
-              }
+        if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY()+4);
+            if (dashtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("enter"))
+            {   
+                setLocation(getX(), getY()+152);
+                dashtimer.mark();
+            }
         }
-            if(Greenfoot.isKeyDown("right")){
-                move(4);
-                way=1;
-                this.setImage("2ndCharacter (6)_Flipped.png");
-                if (dashtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("enter"))
-              {
-                    move(152);
-                    dashtimer.mark();
-              }
+        if(Greenfoot.isKeyDown("right"))
+        {
+            move(4);
+            facingDirection=1;
+            this.setImage("2ndCharacter (6)_Flipped.png");
+            if (dashtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("enter"))
+            {
+                move(152);
+                dashtimer.mark();
+            }
         }
-                if(Greenfoot.isKeyDown("left")){
-                    move(-4);
-                    way=2;
-                    this.setImage("2ndCharacter (6).png");
-                    if (dashtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("enter"))
-                  {
-                        move(-152);
-                        dashtimer.mark();
-                  }
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-4);
+            facingDirection=2;
+            this.setImage("2ndCharacter (6).png");
+            if (dashtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("enter"))
+            {
+                move(-152);
+                dashtimer.mark();
+            }
         }
     }
     public void walls()// this method prevents the player from clipping through the walls of the third level
@@ -149,9 +156,11 @@ public class Player2L extends Actor
     public void shoot()
     {
     if(getWorld() != null && getWorld().getClass().getName().equals("FirstLevel")||getWorld().getClass().getName().equals("SecondLevel")
-    ||getWorld().getClass().getName().equals("Tutorial")){
-        if (way == 1) {
-            if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) {
+    ||getWorld().getClass().getName().equals("Tutorial"))
+    {
+        if (facingDirection == 1) {
+            if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p"))
+            {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
                 world.addObject( new  Bullet2R(), getX()+60, getY()+13);
@@ -159,8 +168,10 @@ public class Player2L extends Actor
                 
             }
         }
-        if (way == 2) {
-            if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) {
+        if (facingDirection == 2) 
+        {
+            if (shootingtimer.millisElapsed() > 1000 && Greenfoot.isKeyDown("p")) 
+            {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
                 world.addObject( new  Bullet2L(), getX()-60, getY()+13);
@@ -169,9 +180,12 @@ public class Player2L extends Actor
         }
     }
     
-        if(getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel")){
-        if (way == 1) {
-            if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) {
+    if(getWorld() != null && getWorld().getClass().getName().equals("ThirdLevel"))
+    {
+        if (facingDirection == 1) 
+        {
+            if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) 
+            {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
                 world.addObject( new  Bullet2R(), getX()+60, getY()+13);
@@ -179,8 +193,10 @@ public class Player2L extends Actor
                 
             }
         }
-        if (way == 2) {
-            if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p")) {
+        if (facingDirection == 2) 
+        {
+            if (shootingtimer.millisElapsed() > 300 && Greenfoot.isKeyDown("p"))
+            {
                 Greenfoot.playSound("GUNSOUND.wav");
                 World world = getWorld();
                 world.addObject( new  Bullet2L(), getX()-60, getY()+13);
@@ -190,13 +206,6 @@ public class Player2L extends Actor
     }
     }
 
-    /**
-     * 
-     */
-    public void score()
-    {
-    }
-    
     public boolean Player2Win()
     {
         World world = getWorld();
@@ -218,12 +227,7 @@ public class Player2L extends Actor
         Greenfoot.setWorld(player2Win);
         Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
     }
-    
-    
-    
-    
-    
-    
+
     public boolean Player2Win2()
     {
         World world = getWorld();
@@ -233,7 +237,8 @@ public class Player2L extends Actor
         {
             return true;
         }
-        else {
+        else 
+        {
             return false;
         }
     }
@@ -246,8 +251,8 @@ public class Player2L extends Actor
         Greenfoot.playSound("Applause_Crowd_Cheering_sound_effectFORWINSCREEN.wav");
     }
     
-    
-    public void ThirdLevel(){
+    public void ThirdLevel()
+    {
         Actor bullet1L = getOneIntersectingObject(Bullet2L.class);
         Actor bullet1R = getOneIntersectingObject(Bullet2R.class);
         
@@ -258,7 +263,7 @@ public class Player2L extends Actor
             FirstLevel.player2Counter.remove(50);
             getWorld().removeObject(bullet1L);
             
-                }
+        }
         
         if (bullet1R != null)
         {
