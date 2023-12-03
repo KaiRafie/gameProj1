@@ -38,7 +38,7 @@ public class Tutorial extends World
 
         public void act()
         {
-        if ( getObjects(Girafe.class).isEmpty() && getObjects(Zebra.class).isEmpty()){
+        if ( getObjects(Giraffe.class).isEmpty() && getObjects(Zebra.class).isEmpty()){
             stopped(); 
             World startScreen =  new  StartScreen();
             Greenfoot.setWorld(startScreen);
@@ -65,14 +65,14 @@ public class Tutorial extends World
         addObject(player1R,66,487);
         Player2L player2L = new Player2L();
         addObject(player2L,1223,157);
-        Girafe girafe = new Girafe();
-        addObject(girafe,1131,576);
-        Girafe girafe2 = new Girafe();
-        addObject(girafe2,650,612);
-        Girafe girafe3 = new Girafe();
-        addObject(girafe3,460,330);
-        Girafe girafe4 = new Girafe();
-        addObject(girafe4,794,104);
+        Giraffe giraffe = new Giraffe();
+        addObject(giraffe,1131,576);
+        Giraffe giraffe2 = new Giraffe();
+        addObject(giraffe2,650,612);
+        Giraffe giraffe3 = new Giraffe();
+        addObject(giraffe3,460,330);
+        Giraffe giraffe4 = new Giraffe();
+        addObject(giraffe4,794,104);
         Zebra zebra = new Zebra();
         addObject(zebra,1016,340);
         Zebra zebra2 = new Zebra();
@@ -126,7 +126,7 @@ public class Tutorial extends World
 
         Enter enter2 = new Enter();
         addObject(enter2,954,823);
-        removeObject(girafe4);
+        removeObject(giraffe4);
         removeObject(zebra5);
         zebra4.setLocation(184,259);
     }

@@ -1,10 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class bullet2R here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This is the Right bullet for player2 class, where the bullet flys right
+ * All explanations found in Bullet1L class because it's quite the same*
  */
 public class Bullet2R extends Actor
 {
@@ -64,8 +62,8 @@ public class Bullet2R extends Actor
     
     public void girafe()
     {
-        Actor girafe = getOneIntersectingObject(Girafe.class);
-        if (girafe != null) {
+        Actor giraffe = getOneIntersectingObject(Giraffe.class);
+        if (giraffe != null) {
             Greenfoot.playSound("Quick_Fart_Sound_EffectEDITED.wav");
         }
     }
@@ -80,16 +78,16 @@ public class Bullet2R extends Actor
     }
     public void RemoveTutorial()
     {
-        Actor girafe = getOneIntersectingObject(Girafe.class);
-        Girafe girafe1 = (Girafe)getOneIntersectingObject(Girafe.class);
+        Actor giraffe = getOneIntersectingObject(Giraffe.class);
+        Giraffe giraffe1 = (Giraffe)getOneIntersectingObject(Giraffe.class);
         Actor zebra = getOneIntersectingObject(Zebra.class);
         Tutorial world = (Tutorial)getWorld();
         if(zebra!=null||isAtEdge()){
             world.removeObject(zebra);
             world.removeObject(this);
         }
-        if(girafe!=null){
-            girafe1.life();
+        if(giraffe!=null){
+            giraffe1.life();
             world.removeObject(this);
         }
     }

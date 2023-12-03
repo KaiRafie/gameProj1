@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Bullet1R
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ bullet1R\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ is\ the\ Right\ bullet\ for\ player1\ class,\ where\ the\ bullet\ flys\ right\r\n\ All\ explanations\ found\ in\ Bullet1L\ class\ because\ it's\ quite\ the\ same*\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ bullet1R\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
