@@ -33,8 +33,8 @@ public class ThirdLevel extends World
         addObject(FirstLevel.player2Counter, 1250, 20);
         
        
-        showTextWithBigWhiteFont("Final 15 seconds PVP fight ", 505, 70);
-        showTextWithBigWhiteFont("Hitting the opponent gains you 50 points and loses them 50 points", 220, 100);
+        showTextWithBigWhiteFont("15 seconds PvP fight ", 505, 70);
+        showTextWithBigWhiteFont("Hitting the opponent gains you 50 points and loses them 50 points", 220, 110);
         
         
         prepare();
@@ -48,7 +48,7 @@ public class ThirdLevel extends World
     public void act(){
         
         Display display = new Display();
-        addObject(display , 700, 20);
+        addObject(display , 650, 20);
         int timerValue = (int) (timeleft())/1000;
         //showTextWithBigWhiteFont("time "+ timerValue , 700, 70);
         display.setImage(new GreenfootImage( timerValue +" Seconds", 35, Color.WHITE, Color.BLACK, Color.BLACK));

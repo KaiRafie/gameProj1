@@ -23,7 +23,7 @@ public class Player1WinFinal extends World
       showTextWithBigBlackFont("Player 1", 555, 280);
         showTextWithBigBlackFont("is", 620, 370);
         showTextWithBigBlackFont("the winner!!!", 510, 460);
-        showTextWithBigBlackFont("Final Score \n     "+FirstLevel.player1Counter.getValue(),520,560);
+        showTextWithBigBlackFont("Final Score: \n     "+FirstLevel.player1Counter.getValue(),520,560);
     }
     public void act(){
         if (transition.millisElapsed()>6000)

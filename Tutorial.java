@@ -27,10 +27,10 @@ public class Tutorial extends World
         
         showTextWithBigWhiteFont("Moving   Shooting   Dashing                                                                Dashing  Shooting  Moving ", 20, 880);
         
-        showTextWithBigWhiteFont(" Welcome to Hunters Royal",500,25);
-        showTextWithBigWhiteFont(" Big Animals need two shots to kill and give 100 points",325,60);
-        showTextWithBigWhiteFont(" Small Animals need one shot to kill and give 50 points",325,85);
-        showTextWithBigWhiteFont("Watch out! The Final level is different!",450,120);
+        showTextWithBigWhiteFont(" Welcome to Hunters Royal!!",500,25);
+        showTextWithBigWhiteFont(" Two shots to kill big animals, you earn 100 points",325,60);
+        showTextWithBigWhiteFont(" One shot to kill small animals, you earn 50 points",325,95);
+        showTextWithBigWhiteFont(" Watch out! The Final level is different!",450,130);
 
         
         prepare();
@@ -129,5 +129,9 @@ public class Tutorial extends World
         removeObject(giraffe4);
         removeObject(zebra5);
         zebra4.setLocation(184,259);
+
+        removeObject(spacebar);
+        Spacebar spacebar1 = new Spacebar();
+        addObject(spacebar,202,829);
     }
 }
