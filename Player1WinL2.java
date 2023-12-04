@@ -23,7 +23,7 @@ public class Player1WinL2 extends World
         
         showTextWithBigBlackFont("Press C to continue to next level ", 365, 900);
         
-        showTextWithBigBlackFont("Player 1 wins with "+FirstLevel.player2Counter.getValue()+ " points!!!", 360, 450);
+        showTextWithBigBlackFont("Player 1 wins with "+FirstLevel.player1Counter.getValue()+ " points!!!", 360, 450);
     }
     
     
