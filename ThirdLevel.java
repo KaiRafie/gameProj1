@@ -33,7 +33,7 @@ public class ThirdLevel extends World
         addObject(FirstLevel.player2Counter, 1250, 20);
         
        
-        showTextWithBigWhiteFont("15 seconds PvP fight ", 505, 70);
+        showTextWithBigWhiteFont("20 seconds PvP fight ", 505, 70);
         showTextWithBigWhiteFont("Hitting the opponent gains you 50 points and loses them 50 points", 220, 110);
         
         
@@ -56,7 +56,7 @@ public class ThirdLevel extends World
         transitionToWin();
     }
     public void transitionToWin(){
-        if (winTimer.millisElapsed()>15000)
+        if (winTimer.millisElapsed()>20000)
         {
             if(FirstLevel.player1Counter.getValue()>FirstLevel.player2Counter.getValue())
             {

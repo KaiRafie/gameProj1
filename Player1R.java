@@ -188,7 +188,7 @@ public class Player1R extends Players
                 {
                     Greenfoot.playSound("GUNSOUND.wav");
                     World world = getWorld();
-                    world.addObject( new  Bullet1L(), getX()+60, getY()+20);
+                    world.addObject( new  Bullet1L(), getX()-60, getY()+20);
                     shootingtimer.mark();
                 }
             }
