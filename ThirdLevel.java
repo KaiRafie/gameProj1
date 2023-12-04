@@ -26,7 +26,6 @@ public class ThirdLevel extends World
         
         started();
         
-        
         showTextWithBigWhiteFont("Player 1", 10, 70);
         addObject(FirstLevel.player1Counter, 50, 20);
         showTextWithBigWhiteFont("Player 2", 1190, 70);
@@ -36,9 +35,7 @@ public class ThirdLevel extends World
         showTextWithBigWhiteFont("20 seconds PvP fight ", 505, 70);
         showTextWithBigWhiteFont("Hitting the opponent gains you 50 points and loses them 50 points", 220, 110);
         
-        
         prepare();
-        
         
     }
     
@@ -74,10 +71,7 @@ public class ThirdLevel extends World
             }
         }
         
-        
     }
-    
-    
     
     public void showTextWithBigWhiteFont(String message, int x, int y)
     {
@@ -95,7 +89,6 @@ public class ThirdLevel extends World
      */
     public void started()
     {
-        
         gameMusic.playLoop();
     }
 

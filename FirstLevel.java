@@ -11,9 +11,7 @@ public class FirstLevel extends World
     private GreenfootSound gameMusic;//creating a variable for music
     //these are the counter objects for both players
     public static Player1Counter player1Counter =  new  Player1Counter();
-    
     public static Player2Counter player2Counter =  new  Player2Counter();
-    
         /**
      * Constructor for the first level sets the design of the level with the
      * background music and the initial values for the score counter
@@ -23,7 +21,6 @@ public class FirstLevel extends World
         super(1300, 900, 1);
         
         gameMusic =  new  GreenfootSound("chill_jungle_ambient.wav");
-        
         started();
         prepare();
         //initial counter values
@@ -34,14 +31,8 @@ public class FirstLevel extends World
         addObject(player1Counter, 50, 20);//the place for the counter1
         showTextWithBigWhiteFont("Player 2", 1190, 70);
         addObject(player2Counter, 1250, 20);//the place for the counter2
-        
-        
-        
     }
     
-    public void act(){
-        
-    }
     public void showTextWithBigWhiteFont(String message, int x, int y)
     {//this method for the text shown on the top corners
         GreenfootImage bg = getBackground();
@@ -56,7 +47,6 @@ public class FirstLevel extends World
      */
     public void started()
     {
-        
         gameMusic.playLoop();
     }
 

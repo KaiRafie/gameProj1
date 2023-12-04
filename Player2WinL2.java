@@ -42,11 +42,7 @@ public class Player2WinL2 extends World
             World thirdLevel =  new  ThirdLevel();
             Greenfoot.setWorld(thirdLevel);
         }
-        
-        
     }
-    
-    
     public void showTextWithBigBlackFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();

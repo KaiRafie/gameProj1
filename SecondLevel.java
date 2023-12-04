@@ -33,11 +33,6 @@ public class SecondLevel extends World
         prepare();
     }
     
-    public void act(){
-        
-    }
-    
-    
     public void showTextWithBigWhiteFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();
@@ -46,8 +41,6 @@ public class SecondLevel extends World
         bg.setColor(Color.WHITE);
         bg.drawString(message, x, y);
     }
-    
-    
     
     /**
      * this method starts music
